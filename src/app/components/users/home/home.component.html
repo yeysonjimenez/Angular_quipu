@@ -1,0 +1,45 @@
+<section id="home" class="father">
+  <div class="container" class="child">
+    <div class="row">
+      <div class="col-xs-12 col-sm-6 col-md-4" >
+        <div class="container">
+          <div class="card">
+            <div class="card-body text-center">
+              <p>
+
+                <img class="img-fluid" >
+              </p>
+              <h4 class="card-title"></h4>
+              <p class="card-text">
+              </p>
+              <div class="container-precio-idioma">
+                <p class="badge badge-info" *ngIf="congratulations">
+                  Congratulations you are new user, you have a {{data['tokens']}} tokens
+                </p>
+                <p class="badge badge-info">
+                 User : {{data['user']}}
+                </p>
+                <p class="badge badge-info">
+                 Tokens : {{data['tokens']}} €
+                </p>
+                <p class="badge badge-info">
+                  How many tokens do you want to sell?
+                </p>
+                <input [(ngModel)]="sell" type="number" id="tentacles" name="tentacles"
+                       min="10" max="100">
+                <p class="badge badge-info">
+                  What is the price you want to sell them ?
+                </p>
+                <input [(ngModel)]="price" type="price" id="price" name="price" class="form-control" placeholder="price" required>
+                <button (click)="onClickMe()">sell it!</button>
+                <p class="badge badge-info">
+                </p>
+              </div>
+              <button (click)="onLoOut()">Log Out!</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
